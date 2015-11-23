@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+    <name>mapreduce.cluster.local.dir</name>
+    <value>file:///data/sdl/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdk/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdj/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdi/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdh/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdg/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdf/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sde/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdd/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdc/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sdb/public/hadoop-2.5.1-tmp/mapred/local,file:///data/sda/public/hadoop-2.5.1-tmp/mapred/local</value>
+</property>
+
+<property>
+    <name>mapreduce.jobtracker.system.dir</name>
+    <value>file:///data/sdk/public/hadoop-2.5.1-tmp/mapred/system</value>
+</property>
+
+<property>
+    <name>mapreduce.jobtracker.staging.root.dir</name>
+    <value>file:///data/sdk/public/hadoop-2.5.1-tmp/mapred/staging</value>
+</property>
+
+<property>
+    <name>mapreduce.cluster.temp.dir</name>
+    <value>file:///data/sdk/public/hadoop-2.5.1-tmp/mapred/temp</value>
+</property>
+
+<property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+</property>
+
+<property>
+    <name>mapreduce.jobtracker.address</name>
+    <value>0.0.0.0:44750</value>
+</property>
+
+<property>
+    <name>mapreduce.jobhistory.address</name>
+    <value>moe-ln01:10020</value>
+</property>
+
+<property>
+    <name>mapreduce.tasktracker.http.address</name>
+    <value>0.0.0.0:0</value>
+</property>
+
+<property>
+    <name>mapreduce.jobtracker.http.address</name>
+    <value>0.0.0.0:0</value>
+</property>
+
+<property>
+    <name>mapreduce.shuffle.port</name>
+    <value>43562</value>
+</property>
+
+<property>
+    <name>mapreduce.reduce.shuffle.parallelcopies</name>
+    <value>10</value>
+</property>
+
+<!-- orginial 20 by xiaoming -->
+<property>
+    <name>mapreduce.tasktracker.map.tasks.maximum</name>
+    <value>10</value>
+</property>
+
+<property>
+    <name>mapreduce.tasktracker.reduce.tasks.maximum</name>
+    <value>8</value>
+</property>
+
+<property>
+    <name>mapreduce.job.jvm.numtasks</name>
+    <value>-1</value>
+</property>
+
+<property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>2100</value>
+</property>
+
+<property>
+    <name>mapreduce.map.java.opts</name>
+    <value>-Xmx2048m</value>
+</property>
+
+<property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>2100</value>
+</property>
+
+<property>
+    <name>mapreduce.reduce.java.opts</name>
+    <value>-Xmx2048m</value>
+</property>
+
+<property>
+    <name>mapred.task.timeout</name>
+    <value>1200000</value>
+</property>
+
+<!--
+<property>
+    <name>mapreduce.jobtracker.taskscheduler</name>
+    <value>org.apache.hadoop.mapred.LocalityFirstTaskScheduler</value>
+</property>
+-->
+
+<!-- added for harp -->
+<property>
+    <name>mapreduce.map.collective.memory.mb</name>
+    <value>10240</value>
+</property>
+
+<property>
+      <name>mapreduce.map.collective.java.memory.mb</name>
+      <value>10000</value>
+</property>
+
+<property>
+      <name>mapreduce.map.collective.java.opts</name>
+      <value>-Xmx10240m -Xms10240m</value>
+</property>
+
+<property>
+    <name>yarn.app.mapreduce.am.resource.mb</name>
+    <value>4096</value>
+    <description>Large heap-size for child JVMs of maps/reduces</description>
+</property>
+
+</configuration>

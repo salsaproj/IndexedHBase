@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+ 
+<property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///public/hadoop-2.5.1-dfs/name</value>
+</property>
+
+<property>
+    <name>dfs.namenode.checkpoint.dir</name>
+    <value>file:///public/hadoop-2.5.1-dfs/namesecondary</value>
+</property>
+
+<property>
+    <name>dfs.datanode.data.dir</name>
+    <value>file:///data/sda/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdb/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdc/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdd/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sde/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdf/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdg/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdh/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdi/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdj/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdk/public/hadoop-2.5.1-tmp/dfs/data,file:///data/sdl/public/hadoop-2.5.1-tmp/dfs/data</value>
+</property>
+
+<property>
+    <name>dfs.replication</name>
+    <value>3</value>
+</property>
+
+<property>
+    <name>dfs.block.size</name>
+    <value>67108864</value>
+</property>
+
+<property>
+    <name>dfs.datanode.handler.count</name>
+    <value>64</value>
+</property>
+
+<property>
+    <name>dfs.datanode.max.xcievers</name>
+    <value>4096</value>
+</property>
+
+<property>
+    <name>dfs.datanode.socket.write.timeout</name>
+    <value>0</value>
+</property>
+
+<property>
+    <name>dfs.datanode.address</name>
+    <value>0.0.0.0:44849</value>
+</property>
+
+<property>
+    <name>dfs.datanode.ipc.address</name>
+    <value>0.0.0.0:44859</value>
+</property>
+
+<property>
+    <name>dfs.datanode.http.address</name>
+    <value>0.0.0.0:44869</value>
+</property>
+
+<property>
+    <name>dfs.permissions</name>
+    <value>false</value>
+</property>
+
+<property>
+    <name>dfs.support.append</name>
+    <value>true</value>
+</property>
+
+<!-- add for less system buffer cached (failed)
+<property>
+    <name>dfs.datanode.drop.cache.behind.reads</name>
+    <value>true</value>
+</property>
+
+<property>
+    <name>dfs.datanode.drop.cache.behind.writes</name>
+    <value>true</value>
+</property>
+-->
+
+<property>
+    <name>dfs.datanode.failed.volumes.tolerated</name>
+    <value>2</value>
+</property>
+
+</configuration>

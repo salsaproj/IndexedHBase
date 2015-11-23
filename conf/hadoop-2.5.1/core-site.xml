@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+    <name>hadoop.tmp.dir</name>
+    <value>/data/sdl/public/hadoop-2.5.1-tmp</value>
+</property>
+
+<property>
+    <name>io.seqfile.local.dir</name>
+    <value>/data/sdl/public/hadoop-2.5.1-tmp/io/local,/data/sdk/public/hadoop-2.5.1-tmp/io/local,/data/sdj/public/hadoop-2.5.1-tmp/io/local,/data/sdi/public/hadoop-2.5.1-tmp/io/local,/data/sdh/public/hadoop-2.5.1-tmp/io/local,/data/sdg/public/hadoop-2.5.1-tmp/io/local,/data/sdf/public/hadoop-2.5.1-tmp/io/local,/data/sde/public/hadoop-2.5.1-tmp/io/local,/data/sdd/public/hadoop-2.5.1-tmp/io/local,/data/sdc/public/hadoop-2.5.1-tmp/io/local,/data/sdb/public/hadoop-2.5.1-tmp/io/local,/data/sda/public/hadoop-2.5.1-tmp/io/local</value>
+</property>
+
+<property>
+    <name>fs.s3.buffer.dir</name>
+    <value>/data/sdl/public/hadoop-2.5.1-tmp/s3</value>
+</property>
+
+<property>
+    <name>fs.default.name</name>
+    <value>hdfs://ln01:44749</value>
+</property>
+
+<property>
+    <name>io.file.buffer.size</name>
+    <value>131072</value>
+    <description>Size of read/write buffer</description>
+</property>
+
+<property>
+    <name>fs.inmemory.size.mb</name>
+    <value>1024</value>
+    <description>Larger amount of memory allocated for the in-memory file-system used to merge map-outputsat the reduces. </description>
+</property>
+
+<property>
+    <name>io.sort.mb</name>
+    <value>512</value>
+    <description>Higher memory-limit while sorting data.</description>
+</property>
+
+</configuration>

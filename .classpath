@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="apps/digitalLibrary/src"/>
+	<classpathentry kind="src" path="apps/socialDataAnalysis-truthy/src"/>
+	<classpathentry kind="src" path="apps/textIndexing-clueweb09/src"/>
+	<classpathentry kind="src" path="core/src"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-3.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/nekohtml.jar"/>
+	<classpathentry kind="lib" path="lib/xercesMinimal.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+	<index-config>
+		<source-table>tweetTable-__year__-__month__</source-table>
+		<source-column-family>d</source-column-family>
+		<source-qualifier>ui</source-qualifier>
+		<source-value-type>bytes</source-value-type>
+		<index-table>userTweetsIndexTable-__year__-__month__</index-table>
+		<index-column-family>t</index-column-family>
+		<index-qualifier>{source}.{rowkey}</index-qualifier>
+		<index-timestamp>{source}.d.ct</index-timestamp>
+	</index-config>
+	<index-config>
+		<source-table>tweetTable-__year__-__month__</source-table>
+		<source-column-family>d</source-column-family>
+		<source-qualifier>rt</source-qualifier>
+		<source-value-type>bytes</source-value-type>
+		<index-table>retweetIndexTable-__year__-__month__</index-table>
+		<index-column-family>t</index-column-family>
+		<index-qualifier>{source}.{rowkey}</index-qualifier>
+		<index-timestamp>{source}.d.ct</index-timestamp>
+	</index-config>
+    <index-config>
+		<source-table>tweetTable-__year__-__month__</source-table>
+		<source-column-family>d</source-column-family>
+		<source-qualifier>ct</source-qualifier>
+		<source-value-type>bytes</source-value-type>
+		<index-table>timeIndexTable-__year__-__month__</index-table>
+		<index-column-family>t</index-column-family>
+		<index-qualifier>{source}.{rowkey}</index-qualifier>
+	</index-config>
+	<index-config>
+		<source-table>tweetTable-__year__-__month__</source-table>
+		<index-table>memeIndexTable-__year__-__month__</index-table>
+        <indexer-class>iu.pti.hbaseapp.truthy.MemeIndexerWithUid</indexer-class>
+	</index-config>
+	<index-config>
+		<source-table>tweetTable-__year__-__month__</source-table>
+		<index-table>textIndexTable-__year__-__month__</index-table>
+        <indexer-class>iu.pti.hbaseapp.truthy.TweetTextIndexer</indexer-class>
+	</index-config>
+	<index-config>
+		<source-table>userTable-__year__-__month__</source-table>
+		<index-table>snameIndexTable-__year__-__month__</index-table>
+		<indexer-class>iu.pti.hbaseapp.truthy.UserSnameIndexer</indexer-class>
+	</index-config>
+    <index-config>
+        <source-table>tweetTable-__year__-__month__</source-table>
+        <index-table>geoIndexTable-__year__-__month__</index-table>
+        <indexer-class>iu.pti.hbaseapp.truthy.GeoIndexerWithUid</indexer-class>
+    </index-config>
+
+<!--	
+	<index-config>
+		<source-table>userTable-2012-06</source-table>
+		<source-column-family>details</source-column-family>
+		<source-qualifier>screenName</source-qualifier>
+		<source-value-type>string-case-incensitive</source-value-type>
+		<index-table>snameIndexTable-2012-06</index-table>
+		<index-column-family>users</index-column-family>
+		<index-qualifier>{source}.{rowkey[0:7]}</index-qualifier>
+		<index-timestamp>{source}.details.createdAt</index-timestamp>
+	</index-config>
+-->
+</configurations>
